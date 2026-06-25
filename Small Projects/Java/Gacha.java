@@ -37,3 +37,14 @@ import java.util.Random;
                     System.out.println("You got " + characters[4] + "!");
                     uurcount++;
                 }  
+            }
+            System.out.println("\nResults:");
+            System.out.println("R: " + rcount);
+            System.out.println("SR: " + srcount);
+            System.out.println("SSR: " + ssrcount);
+            System.out.println("UR: " + urcount);
+            System.out.println("UUR: " + uurcount);
+            s.close();
+        }
+        
+    }
