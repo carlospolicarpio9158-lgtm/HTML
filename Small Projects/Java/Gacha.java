@@ -20,3 +20,20 @@ import java.util.Random;
 
             for (int i = 1; i <= tickets; i++) {
                 int roll = r.nextInt(100) + 1;
+                
+                if (roll <= 60) {
+                    System.out.println("You got " + characters[0] + "!");
+                    rcount++;
+                } else if (roll <= 75) {
+                    System.out.println("You got " + characters[3] + "!");
+                    srcount++;
+                } else if (roll <= 85) {
+                    System.out.println("You got " + characters[2] + "!");
+                    ssrcount++;
+                } else if (roll <= 95) {
+                    System.out.println("You got " + characters[1] + "!");
+                    urcount++;
+                } else {
+                    System.out.println("You got " + characters[4] + "!");
+                    uurcount++;
+                }  
