@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+        Full Name: Policarpio, Carlos Fernando P.
+        Section: (add your section)
+        Activity: Album Adventures
+        Date: 10/10/2026
+        -->
+        <title>Album Adventures</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="CSS/styles.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Gentium+Book+Plus:wght@700&family=Geist:wght@400;600;700&family=Poppins&family=Gelasio:wght@700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="container">
+
+        <header>
+            <a href="index.html" class="brand"><img src="img/logo.svg" alt="" class="logo"/> Album Adventures</a>
+
+            <!-- Mobile menu: the checkbox shows/hides the nav (no JavaScript) -->
+            <input type="checkbox" id="menu-toggle"/>
+            <label for="menu-toggle" class="burger">&#9776;</label>
+
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="artist.html">Artist</a>
+                <a href="album.html">Album</a>
+                <a href="contact.html">Contact us</a>
+            </nav>
+        </header>
+
+        <main>
+            <div id="home-bg">
+            <section id="hero">
+                <div class="hero-inner">
+                    <div class="hero-text">
+                        <h1 class="epic-logo"><img src="img/epiclogo.png" alt="EPIC"/></h1>
+                        <p class="by">By Jorge Rivera-Herrans</p>
+                        <a href="album.html" class="btn-listen">Listen now &nbsp;&rarr;</a>
+                    </div>
+                    <div class="video" id="video-box">
+                        <video id="mv" poster="img/thumb.png" preload="metadata">
+                            <source src="media/mv.mp4" type="video/mp4"/>
+                            <source src="media/mv.ogg" type="video/ogg"/>
+                            <p>Your browser does not support the video element.</p>
+                        </video>
+                        <button type="button" class="play-btn" id="play-btn" aria-label="Play video">&#9654;</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="concept">
+                <div class="concept-text">
+                    <span class="pill">The Concept</span>
+                    <h2>A mythical odyssey through godly fury, monstrous sacrifice, and the ruthless cost of returning home.</h2>
+                    <p>Jorge Rivera-Herrans's musical masterpiece seamlessly blends the timeless story of Homer's Odyssey with the cinematic scale of modern pop-rock scoring. EPIC: The Musical is a powerful reflection of human perseverance and moral conflict, captured across dynamic sagas through soaring vocals, rich orchestration, and unforgettable character motifs.</p>
+                </div>
+
+                <div class="tracks">
+                    <h4>Featured tracks preview</h4>
+                    <div class="track-card">
+                        <span class="song"><button type="button" class="play" aria-label="Play The Horse and the Infant">&#9654;</button> 01. The Horse and the Infant</span>
+                        <span class="time">3:54</span>
+                        <audio src="media/horse.mp3" preload="none"></audio>
+                    </div>
+                    <div class="track-card">
+                        <span class="song"><button type="button" class="play" aria-label="Play Just a Man">&#9654;</button> 02. Just a Man</span>
+                        <span class="time">2:29</span>
+                        <audio src="media/just.mp3" preload="none"></audio>
+                    </div>
+                    <div class="track-card">
+                        <span class="song"><button type="button" class="play" aria-label="Play Full Speed Ahead">&#9654;</button> 03. Full Speed Ahead</span>
+                        <span class="time">3:00</span>
+                        <audio src="media/full.mp3" preload="none"></audio>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </main>
+
+        <footer>
+            <p class="social"><a href="#"><img src="img/facebook.svg" alt="Facebook"/></a> <a href="#"><img src="img/instagram.svg" alt="Instagram"/></a></p>
+            <p>Follow us on social media</p>
+            <p><a href="tel:5551234567" class="tel">tel: (555) 123-4567</a></p>
+            <p class="copy">&copy; 2026 Created by: Carlos Policarpio</p>
+        </footer>
+
+        </div>
+
+        <script src="JS/script.js"></script>
+    </body>
+</html>
