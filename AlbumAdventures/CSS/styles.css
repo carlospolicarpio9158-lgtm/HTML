@@ -4,29 +4,28 @@
         Activity: Album Adventures
         Date: 10/13/2026
 --*/
-
-/* CSS reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* CSS styles for body, images, links and text */
-body {
-    background-color: #000;
-    color: #f3f4f6;
-    font-family: 'Geist', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
+ 
+/* Colors */
+:root {
+    /* colors */
+    --black: #000;
+    --white: #fff;
+    --text: #f3f4f6;
+    --muted: #8a8d93;
+    --gray: #8e8e93;
+    --red: #ff383c;
+    --red-bright: #f00;
+    --red-dark: #900;
+    --red-tint: rgba(255, 56, 60, 0.14);
+    --pill-bg: rgba(255, 0, 0, 0.1);
+    --card: #121214;
+    --line: #1f1f24;
+    --hero-bg: #2b1f1f;
+    --page-bg: #0b0b0c;
+    --footer-bg: #0a0a0a;
+    --input-bg: #d9d9d9;
+    --input-text: #111;
+    --placeholder: #6b6f76;
+    --reset-bg: #7b7b7b;
+    --btn-dark: #070708;
 }
