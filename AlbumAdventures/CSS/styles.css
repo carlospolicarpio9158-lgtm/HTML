@@ -1,0 +1,32 @@
+/*--
+        Full Name: Policarpio, Carlos Fernando P.
+        Section: WD-202
+        Activity: Album Adventures
+        Date: 10/13/2026
+--*/
+
+/* CSS reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS styles for body, images, links and text */
+body {
+    background-color: #000;
+    color: #f3f4f6;
+    font-family: 'Geist', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
