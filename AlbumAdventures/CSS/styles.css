@@ -5,9 +5,9 @@
         Date: 10/13/2026
 --*/
  
-/* Colors */
+
 :root {
-    /* colors */
+    /* Colors */
     --black: #000;
     --white: #fff;
     --text: #f3f4f6;
@@ -28,4 +28,11 @@
     --placeholder: #6b6f76;
     --reset-bg: #7b7b7b;
     --btn-dark: #070708;
+    /* Fonts */
+    --font-body: 'Geist', Arial, sans-serif;
+    --font-serif: 'Instrument Serif', 'Times New Roman', serif;
+    --font-brand: 'Gentium Book Basic', 'Gentium Book Plus', Georgia, serif;
+    --font-by: 'Gelasio', Georgia, serif;
+    --font-form: 'Poppins', Arial, sans-serif;
+
 }
