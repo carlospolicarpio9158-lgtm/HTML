@@ -180,7 +180,7 @@ main.home {
     display: flex;
     flex-direction: column;
     background-color: var(--hero-bg);
-    background-image: url(img/bgimage.png);
+    background-image: url(...img/bgimage.png);
     background-size: cover;
     background-position: center;
 }
