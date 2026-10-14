@@ -178,7 +178,7 @@ main.home {
     display: flex;
     flex-direction: column;
     background-color: var(--hero-bg);
-    background-image: url(..img/bgimage.png);
+    background-image: url(../img/bgimage.png);
     background-size: cover;
     background-position: center;
 }
@@ -284,7 +284,7 @@ main.home {
     line-height: 1.15;
 }
 
-concepttext p {
+.concepttext p {
     color: var(--muted);
 }
  
