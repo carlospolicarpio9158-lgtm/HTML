@@ -375,3 +375,41 @@ blockquote {
 .abouttext {
     max-width: 560px;
 }
+
+/* Css for artist */
+#artist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+ 
+.jorge {
+    flex: 1 1 260px;
+}
+ 
+.jorge > img {
+    width: 100%;
+    aspect-ratio: 580 / 716;
+    object-fit: cover;
+    border-radius: 10px;
+}
+ 
+.artistinfo {
+    flex: 2 1 320px;
+}
+ 
+.artistinfo h2 {
+    font-size: 38px;
+    margin-bottom: 4px;
+}
+
+.artistinfo h5 {
+    color: var(--muted);
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.artistinfo > p {
+    max-width: 560px;
+}
