@@ -4,8 +4,6 @@
         Activity: Album Adventures
         Date: 10/13/2026
 --*/
- 
-
 :root {
     /* Colors */
     --black: #000;
@@ -180,7 +178,7 @@ main.home {
     display: flex;
     flex-direction: column;
     background-color: var(--hero-bg);
-    background-image: url(...img/bgimage.png);
+    background-image: url(..img/bgimage.png);
     background-size: cover;
     background-position: center;
 }
@@ -284,6 +282,10 @@ main.home {
     font-family: var(--font-serif);
     font-weight: 400;
     line-height: 1.15;
+}
+
+concepttext p {
+    color: var(--muted);
 }
  
 .tracks {
