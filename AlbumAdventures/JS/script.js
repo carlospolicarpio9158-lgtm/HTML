@@ -36,3 +36,26 @@ function stopSongs(except) {
         }
     });
 }
+
+cards.forEach(function (card) {
+    var button = card.querySelector(".play");
+    var song = card.querySelector("audio");
+
+    button.addEventListener("click", function () {
+        if (song.paused) {
+            stopSongs(song);
+            mv.pause();
+            song.play();
+        } else {
+            song.pause();
+        }
+    });
+
+    song.addEventListener("play", function () {
+        button.innerHTML = "&#10074;&#10074;";
+    });
+
+    song.addEventListener("pause", function () {
+        button.innerHTML = "&#9654;";
+    });
+});
