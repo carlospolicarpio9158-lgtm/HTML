@@ -101,3 +101,47 @@ header {
     border-radius: 12px;
     object-fit: cover;
 }
+
+#menu, #menu-toggle {
+    display: none;
+}
+ 
+.burger {
+    border: 2px solid var(--red);
+    border-radius: 9px;
+    color: var(--red);
+    font-size: 22px;
+    line-height: 1;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* CSS for nav and main */
+nav {
+    display: none;
+    width: 100%;
+    margin-top: 12px;
+}
+ 
+#menu:checked ~ nav, #menu-toggle:checked ~ nav {
+    display: block;
+}
+ 
+nav a {
+    display: block;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+}
+ 
+nav a:hover, nav a.active {
+    color: var(--red-bright);
+}
+
+main {
+    flex: 1;
+}
+ 
+main section {
+    padding: 24px 20px;
+}
+ 
