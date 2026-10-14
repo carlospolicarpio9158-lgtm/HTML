@@ -146,8 +146,7 @@ main section {
 }
 
 /* Css for pill */
-.pill,
-.theconcept {
+.pill, .theconcept {
     display: inline-block;
     background-color: var(--pill-bg);
     border: 1px solid var(--red);
@@ -163,4 +162,216 @@ main section {
  
 .red {
     color: var(--red-bright);
+}
+
+/* Css for index */
+.tracksong, .stat, .stats > .stats, .songplat a, #album .header, div.specs, .credits, .form {
+    background-color: var(--card);
+    border: 1px solid var(--line);
+}
+
+main.home {
+    display: flex;
+    flex-direction: column;
+}
+ 
+#homebg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--hero-bg);
+    background-image: url(img/bgimage.png);
+    background-size: cover;
+    background-position: center;
+}
+ 
+#hero {
+    padding: 40px 20px 30px;
+}
+ 
+#heroinside {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+#heroinside > div {
+    flex: 1 1 280px;
+}
+ 
+.herotext {
+    text-align: center;
+}
+ 
+.epiclogo img {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+ 
+.by {
+    font-family: var(--font-by);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin: 10px 0 16px;
+}
+ 
+.btnlisten {
+    display: inline-block;
+    border: 1px solid var(--red);
+    border-radius: 41px;
+    background: radial-gradient(ellipse at center, var(--white) 0%, #ffcdce 25%, #ff9c9e 50%, #ff6a6d 75%, #ff5154 88%, var(--red) 100%);
+    color: var(--btn-dark);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 32px;
+}
+ 
+.btnlisten:hover, .btn:hover {
+    opacity: 0.85;
+}
+
+.video {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(40, 0, 0, 0.82);
+    border-radius: 6px;
+    aspect-ratio: 776 / 320;
+}
+ 
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.playbtn {
+    position: absolute;
+    inset: 0;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 50px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+ 
+.video.playing .playbtn {
+    display: none;
+}
+
+#concept {
+    display: flex;
+    padding-bottom: 40px;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 2, 2, 0.85) 60%, rgba(35, 3, 3, 0.95) 100%);
+    border-top: 1px solid var(--line);
+}
+ 
+#concept > div {
+    flex: 1 1 280px;
+}
+ 
+.concepttext h2 {
+    font-size: 30px;
+}
+ 
+.tracks {
+    max-width: 640px;
+}
+ 
+#concept .tracks h4 {
+    color: var(--red-bright);
+    margin-bottom: 12px;
+}
+
+.tracksong {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+ 
+.tracksong .song {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+ 
+.play {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--red);
+    border-radius: 50%;
+    background-color: var(--red-tint);
+    color: var(--red);
+    font-style: normal;
+    font-size: 12px;
+    line-height: 38px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.play:hover {
+    background-color: rgba(255, 56, 60, 0.3);
+}
+ 
+.tracksong .time {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Css for about */
+#about h2 {
+    margin-bottom: 0;
+}
+
+#banner {
+    padding-top: 0;
+}
+
+#banner img {
+    width: 100%;
+    border-radius: 10px;
+}
+#abouttext {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#abouttext > * {
+    flex: 1 1 280px;
+}
+
+blockquote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.15;
+    color: var(--red);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+ 
+.abouttext {
+    max-width: 560px;
 }
