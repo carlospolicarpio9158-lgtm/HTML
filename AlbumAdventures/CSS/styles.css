@@ -360,6 +360,7 @@ main.home {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 24px;
+    color: var(--muted);
 }
 
 #abouttext > * {
@@ -446,7 +447,6 @@ blockquote {
     font-family: var(--font-serif);
     font-size: 54px;
     line-height: 1.1;
-    color: var(--text);
 }
 
 .stats .number small {
@@ -459,6 +459,7 @@ blockquote {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 4px;
+    color: var(--muted)
 }
 
 #artist > .stats {
@@ -627,6 +628,7 @@ div.specs h4, .credits h4 {
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: bold;
+    text-transform: uppercase;
 }
  
 .specs td {
@@ -655,6 +657,7 @@ div.specs h4, .credits h4 {
 .credits p {
     font-size: 14px;
     margin-bottom: 0;
+    color: var(--muted);
 }
  
 .credits strong {
