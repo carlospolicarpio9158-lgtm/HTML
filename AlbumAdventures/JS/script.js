@@ -8,3 +8,8 @@
 var box = document.querySelector(".video");
 var mv = document.getElementById("mv");
 var btn = document.getElementById("playbtn");
+
+btn.addEventListener("click", function () {
+    mv.controls = true;
+    mv.play();
+});
