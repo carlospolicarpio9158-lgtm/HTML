@@ -18,8 +18,7 @@
         <div id="container">
         <header>
             <a href="index.html" class="brand"><img src="img/logo.svg" alt="" class="logo"/> Album Adventures</a>
-            <input type="checkbox" id="menu"/>
-            <label for="menu" class="burger">&#9776;</label>
+            <button type="button" class="burger" id="burger">&#9776;</button>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -33,11 +32,9 @@
                 <div class="contact">
                     <h1>Contact Us</h1>
                     <p>Have an Artist/Album you would want us to explore? Contact us!</p>
-
                 </div>
-                <form class="form">
+                <form class="form" novalidate>
                     <h3>Send us a message</h3>
-
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name..." required/>
 
@@ -49,8 +46,11 @@
 
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
-                    <input type="submit" value="Submit" class="btn submit"/>
-                    <input type="reset" value="Reset" class="btn reset"/>
+                    <p id="formmsg" role="alert"></p>
+                    <div class="buttons">
+                        <input type="submit" value="Submit" class="btn submit"/>
+                        <input type="reset" value="Reset" class="btn reset"/>
+                    </div>
                 </form>
             </section>
         </main>
@@ -66,5 +66,6 @@
             <p class="copy">&copy; 2026 Created by: Carlos Policarpio</p>
         </footer>
         </div>
+        <script src="JS/script.js"></script>
     </body>
 </html>
