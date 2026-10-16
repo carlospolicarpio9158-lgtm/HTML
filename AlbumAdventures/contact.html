@@ -42,7 +42,8 @@
                     <input type="email" id="email" name="email" placeholder="Enter your email..." required/>
 
                     <label for="number">Contact Number</label>
-                    <input type="tel" id="number" name="number" placeholder="Enter your contact number..."/>
+                    <input type="tel" id="number" name="number" placeholder="Enter your contact number..."
+                    required pattern="(09|\+639)[0-9]{2}-?[0-9]{3}-?[0-9]{4}" maxlength="15"/>
 
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
