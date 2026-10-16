@@ -20,6 +20,26 @@ if (mv) {
     var box = document.querySelector(".video");
     var btn = document.getElementById("playbtn");
 
+    //audio descriptions
+    var descBox = document.getElementById("descbox");
+
+    function setupDescriptions() {
+        for (var i = 0; i < mv.textTracks.length; i++) {
+            var track = mv.textTracks[i];
+            if (track.kind === "descriptions" && !track.hooked) {
+                track.hooked = true;
+                track.mode = "hidden";
+                track.addEventListener("cuechange", function () {
+                    var cue = this.activeCues[0];
+                    descBox.textContent = cue ? cue.text : "";
+                });
+            }
+        }
+    }
+
+    setupDescriptions();
+    mv.addEventListener("loadedmetadata", setupDescriptions);
+
     btn.addEventListener("click", function () {
         mv.controls = true;
         mv.play();
