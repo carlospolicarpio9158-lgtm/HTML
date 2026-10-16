@@ -41,9 +41,12 @@
                         <video id="mv" poster="img/thumb.png" preload="metadata">
                             <source src="media/mv.mp4" type="video/mp4">
                             <source src="media/mv.ogg" type="video/ogg">
+                            <track kind="captions" src="media/mv-captions.vtt" srclang="en" label="English" default>
+                            <track kind="descriptions" src="media/mv-descriptions.vtt" srclang="en" label="Audio descriptions">
                             <p>Your browser does not support the video element.</p>
                         </video>
                         <button type="button" class="playbtn" id="playbtn" aria-label="Play video">&#9654;</button>
+                        <div id="descbox" class="screenread" aria-live="polite"></div>
                     </div>
                 </div>
             </section>
