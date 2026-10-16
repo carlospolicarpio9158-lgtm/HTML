@@ -8,9 +8,7 @@
     /* Colors */
     --black: #000;
     --white: #fff;
-    --text: #f3f4f6;
-    --muted: #8a8d93;
-    --gray: #8e8e93;
+    --muted: #b4b4b9;
     --red: #ff383c;
     --red-bright: #f00;
     --red-dark: #900;
@@ -20,7 +18,6 @@
     --line: #1f1f24;
     --hero-bg: #2b1f1f;
     --page-bg: #0b0b0c;
-    --footer-bg: #0a0a0a;
     --input-bg: #d9d9d9;
     --input-text: #111;
     --placeholder: #6b6f76;
@@ -43,7 +40,7 @@
 /* CSS styles for body, images, links and text */
 body {
     background-color: var(--black);
-    color: var(--text);
+    color: var(--white);
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.6;
@@ -57,6 +54,11 @@ img {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
 }
 
 /* CSS for container */
@@ -84,7 +86,7 @@ header {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--text);
+    color: var(--white);
 }
 
 .brand{
@@ -99,12 +101,10 @@ header {
     border-radius: 12px;
     object-fit: cover;
 }
-
-#menu {
-    display: none;
-}
  
 .burger {
+    background: none;
+    font-family: inherit;
     border: 2px solid var(--red);
     border-radius: 9px;
     color: var(--red);
@@ -120,11 +120,6 @@ nav {
     width: 100%;
     margin-top: 12px;
 }
- 
-#menu:checked + nav {
-    display: block;
-}
- 
 nav a {
     display: block;
     padding: 14px 0;
@@ -184,14 +179,14 @@ main.home {
 }
  
 #hero {
-    padding: 40px 20px 30px;
+    padding: 24px 20px 20px;
 }
  
 #heroinside {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 #heroinside > div {
@@ -204,7 +199,7 @@ main.home {
  
 .epiclogo img {
     width: 100%;
-    max-width: 360px;
+    max-width: 280px;
     margin: 0 auto;
 }
  
@@ -214,7 +209,7 @@ main.home {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--gray);
+    color: var(--muted);
     margin: 10px 0 16px;
 }
  
@@ -269,8 +264,21 @@ main.home {
     flex: 1;
     flex-wrap: wrap;
     gap: 30px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 2, 2, 0.85) 60%, rgba(35, 3, 3, 0.95) 100%);
-    border-top: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(20, 2, 2, 0.85) 60%, rgba(35, 3, 3, 0.95) 100%);
+    background-size: 100% 200%;
+    animation: gradient-shift 12s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 30% {
+        background-position: 0% 0%;
+    }
+    50%, 80% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
  
 #concept > div {
@@ -278,7 +286,7 @@ main.home {
 }
  
 .concepttext h2 {
-    margin-bottom: 0;
+    margin-bottom: 16px;
     font-family: var(--font-serif);
     font-weight: 400;
     line-height: 1.15;
@@ -286,6 +294,7 @@ main.home {
 
 .concepttext p {
     color: var(--muted);
+    max-width: 60ch;
 }
  
 .tracks {
@@ -306,7 +315,7 @@ main.home {
     padding: 16px 20px;
     margin-bottom: 14px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--white);
 }
  
 .tracksong .song {
@@ -317,15 +326,15 @@ main.home {
  
 .play {
     flex: none;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border: 1px solid var(--red);
     border-radius: 50%;
     background-color: var(--red-tint);
     color: var(--red);
     font-style: normal;
     font-size: 12px;
-    line-height: 38px;
+    line-height: 42px;
     text-align: center;
     padding: 0;
     cursor: pointer;
@@ -333,6 +342,10 @@ main.home {
 
 .play:hover {
     background-color: rgba(255, 56, 60, 0.3);
+}
+
+.tracksong:hover {
+    border-color: var(--red);
 }
  
 .tracksong .time {
@@ -343,7 +356,7 @@ main.home {
 
 /* Css for about */
 #about h2 {
-    margin-bottom: 0;
+    margin-bottom: 16px;
     font-family: var(--font-serif);
     font-weight: 400;
     line-height: 1.15;
@@ -384,6 +397,10 @@ blockquote {
  
 .abouttext {
     max-width: 560px;
+}
+
+.abouttext p {
+    margin-bottom: 14px;
 }
 
 /* Css for artist */
@@ -436,7 +453,7 @@ blockquote {
     margin: 20px 0;
 }
 
-.stat, .stats > .stats {
+.stat {
     display: block;
     flex: 1 1 200px;
     margin: 0;
@@ -545,9 +562,10 @@ blockquote {
     width: 16px;
     height: 16px;
 }
- 
+
 .songplat a:hover {
     border-color: var(--red);
+    background-color: var(--red-tint);
 }
 
 .cover .songplat {
@@ -608,7 +626,10 @@ th:last-child, td:last-child {
     font-weight: 600;
     width: 72px;
 }
- 
+#tracklist tr:hover td {
+    background-color: var(--red-tint);
+}
+
 #details {
     display: flex;
     flex-wrap: wrap;
@@ -653,11 +674,11 @@ div.specs h4, .credits h4 {
 
 .specs td:last-child {
     font-weight: 600;
-    color: var(--text);
+    color: var(--white);
 }
  
 .credits h4 {
-    color: var(--text);
+    color: var(--white);
 }
  
 .credits p {
@@ -717,7 +738,7 @@ main section:has(.contact) {
     font-family: var(--font-serif);
     font-size: 20px;
     color: var(--white);
-    margin: 12px 0 4px;
+    margin: 10px 0 4px;
 }
 
 .form input[type="text"], .form input[type="email"], .form input[type="tel"], .form textarea {
@@ -733,6 +754,24 @@ main section:has(.contact) {
 .form ::placeholder {
     color: var(--placeholder);
 }
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+#formmsg {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+#formmsg.error {
+    color: #ff6b6e;
+}
+
+#formmsg.success {
+    color: #5fd38d;
+}
 
 .btn {
     border: none;
@@ -741,9 +780,8 @@ main section:has(.contact) {
     font-family: var(--font-serif);
     font-size: 26px;
     text-transform: uppercase;
-    width: 48%;
+    flex: 1;
     padding: 8px 0;
-    margin-top: 14px;
     cursor: pointer;
 }
 
@@ -757,7 +795,7 @@ main section:has(.contact) {
 
 /* footer */
 footer {
-    background-color: var(--footer-bg);
+    background-color: var(--page-bg);
     border-top: 1px solid var(--line);
     text-align: center;
     padding: 18px 20px 14px;
@@ -794,6 +832,14 @@ footer .social {
     color: var(--red);
     text-decoration: underline;
 }
+
+.tel:hover {
+    color: var(--white);
+}
+
+.social a:hover {
+    background-color: var(--red);
+}
  
 footer .copy {
     color: var(--muted);
@@ -819,7 +865,7 @@ footer .copy {
 /* MEDIA QUERY FOR TABLET VIEWPORT */
 @media screen and (min-width: 630px) and (max-width: 1024px) {
  
-/* Tablet Viewport: header (the menu button stays on tablet) */
+/* header */
     header {
         padding: 16px 16px 16px 13px;
     }
@@ -849,7 +895,7 @@ footer .copy {
         background-image: url(../img/bgimage.png);
         background-size: cover;
         background-position: center;
-        padding: 65px 64px 29px;
+        padding: 40px 64px 29px;
     }
  
     #heroinside {
@@ -863,7 +909,7 @@ footer .copy {
     }
  
     .epiclogo img {
-        max-width: 480px;
+        max-width: 400px;
     }
  
     .by {
@@ -883,20 +929,20 @@ footer .copy {
     }
  
     #concept {
-        flex-wrap: nowrap;
-        gap: 55px;
-        padding: 46px 22px 19px;
+        flex-direction: column;
+        gap: 32px;
+        padding: 46px 22px 30px;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(38, 5, 5, 0.7) 50%, rgba(51, 8, 8, 0.9) 100%), var(--black);
+        background-size: 100% 200%, 100% 100%;
     }
  
     #concept .concepttext {
-        flex: 355 1 0px;
+        flex: none;
     }
  
     #concept .tracks {
-        flex: 379 1 0px;
+        flex: none;
         max-width: none;
-        padding-top: 6px;
     }
  
     .concepttext .theconcept {
@@ -914,23 +960,16 @@ footer .copy {
     }
  
     .tracksong {
-        height: 54px;
-        padding: 0 21px 0 12px;
-        margin-bottom: 26px;
+        min-height: 60px;
+        padding: 8px 21px 8px 12px;
+        margin-bottom: 16px;
         font-size: 14px;
     }
  
     .tracksong .song {
-        gap: 5px;
+        gap: 12px;
     }
  
-    .play {
-        width: 29px;
-        height: 29px;
-        font-size: 9px;
-        line-height: 27px;
-    }
-
     /* about */
     #about {
         padding: 24px 50px 26px;
@@ -970,7 +1009,7 @@ footer .copy {
         min-height: 288px;
         display: flex;
         align-items: center;
-        font-size: 36px;
+        font-size: 28px;
         padding: 23px 8px;
         border-radius: 15px;
         background-color: var(--card);
@@ -1032,10 +1071,10 @@ footer .copy {
         flex: 1 1 100%;
         flex-wrap: nowrap;
         gap: 13px;
-        margin: 113px 0 0 16px;
+        margin: 40px 0 0 16px;
     }
  
-    #artist > .stats > .stats, #artist > .stats > .stat {
+    #artist > .stats > .stat {
         flex: 1 1 0px;
         min-width: 0;
         max-width: 342px;
@@ -1074,7 +1113,7 @@ footer .copy {
     #album {
         flex-wrap: nowrap;
         align-items: flex-start;
-        gap: 63px;
+        gap: 32px;
         padding: 75px 16px 0;
     }
  
@@ -1151,13 +1190,12 @@ footer .copy {
     }
  
     #details {
-        flex-wrap: nowrap;
-        gap: 68px;
-        padding: 51px 68px 23px 14px;
+        gap: 24px;
+        padding: 40px 16px 23px;
     }
  
     div.specs, .credits {
-        flex: 0 0 342px;
+        flex: 1 1 300px;
         border-radius: 15px;
     }
  
@@ -1207,12 +1245,12 @@ footer .copy {
     .form label {
         font-size: 24px;
         line-height: 1.1;
-        margin: 15px 0;
+        margin: 10px 0 4px;
     }
  
     .form input[type="text"], .form input[type="email"], .form input[type="tel"], .form textarea {
         display: block;
-        padding: 19px 37px;
+        padding: 14px 20px;
     }
  
     .form textarea {
@@ -1221,11 +1259,9 @@ footer .copy {
     }
  
     .btn {
-        width: 214px;
-        height: 55px;
+        height: 50px;
         font-size: 24px;
         padding: 0;
-        margin: 8px 6px 0 0;
     }
 
     /* footer */
@@ -1239,6 +1275,12 @@ footer .copy {
  
     footer .copy {
         margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header.open nav {
+        display: block;
     }
 }
 
@@ -1288,7 +1330,7 @@ footer .copy {
     }
 
     #hero {
-        padding: 70px 72px 40px;
+        padding: 48px 72px 32px;
     }
 
     #banner {
@@ -1336,11 +1378,13 @@ footer .copy {
         border: none;
         padding: 0;
         text-align: left;
-        font-size: 42px;
+        font-size: 34px;
     }
 
-    .abouttext {
-        font-size: 16px;
+    #abouttext .abouttext {
+        flex: 2 1 320px;
+        max-width: none;
+        font-size: 18px;
     }
 
     .artistinfo h2, .albumplat h2 {
@@ -1351,7 +1395,7 @@ footer .copy {
         font-size: 18px;
     }
 
-    .stat, .stats > .stats {
+    .stat {
         flex: 0 0 auto;
         background: none;
         border: none;
@@ -1406,7 +1450,7 @@ footer .copy {
     }
 
     #hero {
-        padding: 90px 99px 40px;
+        padding: 64px 99px 40px;
     }
 
     #concept {
@@ -1439,7 +1483,11 @@ footer .copy {
     }
 
     blockquote {
-        font-size: 50px;
+        font-size: 40px;
+    }
+
+    #abouttext .abouttext {
+        font-size: 20px;
     }
 
     .stats .number {
@@ -1472,7 +1520,11 @@ footer .copy {
 
     .btn {
         font-size: 32px;
-        width: 253px;
-        margin-right: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #concept {
+        animation: none;
     }
 }
