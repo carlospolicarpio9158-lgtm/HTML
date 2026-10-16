@@ -77,7 +77,6 @@ if (mv) {
         });
     });
 }
-
 //contact
 var form = document.querySelector(".form");
 if (form) {
@@ -85,36 +84,9 @@ if (form) {
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-
-        var name = document.getElementById("name").value.trim();
-        var email = document.getElementById("email").value.trim();
-        var number = document.getElementById("number").value.trim();
-        var message = document.getElementById("message").value.trim();
-        var errors = [];
-
-        if (name === "") {
-            errors.push("Please enter your name.");
-        }
-        if (email === "") {
-            errors.push("Please enter your email.");
-        } else if (!/^\S+@\S+\.\S+$/.test(email)) {
-            errors.push("Please enter a valid email address.");
-        }
-        if (number !== "" && !/^[0-9+\-\s()]{7,}$/.test(number)) {
-            errors.push("Please enter a valid contact number.");
-        }
-        if (message === "") {
-            errors.push("Please type a message.");
-        }
-
-        if (errors.length > 0) {
-            formmsg.className = "error";
-            formmsg.innerHTML = errors.join("<br>");
-        } else {
-            form.reset();
-            formmsg.className = "success";
-            formmsg.textContent = "Thank you! Your message has been sent.";
-        }
+        form.reset();
+        formmsg.className = "success";
+        formmsg.textContent = "Thank you! Your message has been sent.";
     });
 
     form.addEventListener("reset", function () {
