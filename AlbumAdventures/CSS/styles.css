@@ -158,7 +158,7 @@ main section {
 }
 
 /* Css for index */
-.tracksong, .songplat a, #album .header, div.specs, .credits, .form {
+.tracksong, .songplat a, #album .header, div.specs, .credits, .form, .stat {
     background-color: var(--card);
     border: 1px solid var(--line);
 }
