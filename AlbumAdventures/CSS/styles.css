@@ -100,7 +100,7 @@ header {
     object-fit: cover;
 }
 
-#menu, #menu-toggle {
+#menu {
     display: none;
 }
  
@@ -121,7 +121,7 @@ nav {
     margin-top: 12px;
 }
  
-#menu:checked ~ nav, #menu-toggle:checked ~ nav {
+#menu:checked + nav {
     display: block;
 }
  
