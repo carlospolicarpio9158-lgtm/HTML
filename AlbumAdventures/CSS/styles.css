@@ -724,7 +724,7 @@ main section:has(.contact) {
     padding: 20px;
 }
  
-.form h3 {
+.form h1 {
     font-family: var(--font-serif);
     font-weight: 400;
     line-height: 1.15;
@@ -1237,7 +1237,7 @@ footer .copy {
         padding: 39px 29px 20px;
     }
  
-    .form h3 {
+    .form h1 {
         font-size: 36px;
         margin-bottom: 0;
     }
@@ -1435,7 +1435,7 @@ footer .copy {
         padding: 28px 30px;
     }
 
-    .form h3 {
+    .form h1 {
         font-size: 32px;
     }
 }
@@ -1510,7 +1510,7 @@ footer .copy {
         font-size: 20px;
     }
 
-    .form h3 {
+    .form h1 {
         font-size: 36px;
     }
 
